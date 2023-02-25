@@ -1,4 +1,4 @@
-module github.com/j-bro/pco-openapi-spec/client-go
+module github.com/j-bro/pco-client-go
 
 go 1.18
 
