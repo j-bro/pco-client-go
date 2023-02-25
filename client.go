@@ -153,14 +153,17 @@ type ArrangementResponse struct {
 	Meta     ObjectMeta               `json:"meta"`
 }
 
+// ArrangementSection defines model for ArrangementSection.
+type ArrangementSection struct {
+	BreaksAt *string `json:"breaks_at,omitempty"`
+	Label    string  `json:"label"`
+	Lyrics   string  `json:"lyrics"`
+}
+
 // ArrangementSections defines model for ArrangementSections.
 type ArrangementSections struct {
 	Attributes struct {
-		Sections []struct {
-			BreaksAt *string `json:"breaks_at,omitempty"`
-			Label    string  `json:"label"`
-			Lyrics   string  `json:"lyrics"`
-		} `json:"sections"`
+		Sections []ArrangementSection `json:"sections"`
 	} `json:"attributes"`
 	Id            string         `json:"id"`
 	Links         *Links         `json:"links,omitempty"`
